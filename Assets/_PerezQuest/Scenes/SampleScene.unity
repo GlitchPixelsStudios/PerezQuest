@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 503052157}
   - component: {fileID: 503052159}
   - component: {fileID: 503052158}
+  - component: {fileID: 503052160}
   m_Layer: 6
   m_Name: Ground (1)
   m_TagString: Untagged
@@ -377,7 +378,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503052156}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -467,6 +468,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &503052160
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503052156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.0005714, y: 0.9902859}
+  m_Direction: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +539,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
+  m_BackGroundColor: {r: 0.5241189, g: 0.7031621, b: 0.735849, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -641,7 +677,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &785037378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,9 +690,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf2bcfab5e64f34bab7899519b0e7d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dj: 1
+  maxJumps: 2
   movementSpeed: 5
-  jumpHeightForce: 10
-  slideForce: 2
+  jumpHeightForce: 4
 --- !u!212 &785037379
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -718,7 +755,7 @@ Transform:
   m_GameObject: {fileID: 785037376}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.555, y: -1.456, z: 0}
+  m_LocalPosition: {x: -7.72, y: -3.81, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
